@@ -130,7 +130,7 @@ neverallow netd system_file:dir_file_class_set write;
 neverallow netd { app_data_file system_data_file }:dir_file_class_set write;
 
 # only system_server and dumpstate may find netd service
-neverallow { domain -system_server -dumpstate -netd } netd_service:service_manager find;
+neverallow { domain -system_server -dumpstate -netd -system_app} netd_service:service_manager find;
 
 # only netd can create the bpf maps
 neverallow { domain -netd } netd:bpf { map_create };
