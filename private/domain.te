@@ -42,6 +42,7 @@ full_treble_only(`
     -ueventd
     -vold
     -priv_app
+    -hal_usb
   } sysfs:file no_rw_file_perms;
 
   # /dev
