@@ -52,6 +52,12 @@ full_treble_only(`
     -fsck
     -init
     -ueventd
+    -priv_app
+    -system_app
+    -platform_app
+    -mediaprovider
+    -nfc
+    -surfaceflinger
   } device:{ blk_file file } no_rw_file_perms;
 
   # debugfs
