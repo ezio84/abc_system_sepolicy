@@ -406,7 +406,7 @@ neverallow * vendor_init:binder *;
 
 # Don't allow raw read/write/open access to block_device
 # Rather force a relabel to a more specific type
-neverallow { domain -kernel -init -recovery -fsck -vold} block_device:blk_file { open read write };
+neverallow { domain -kernel -init -recovery } block_device:blk_file { open read write };
 
 # Do not allow renaming of block files or character files
 # Ability to do so can lead to possible use in an exploit chain
@@ -1158,7 +1158,6 @@ neverallow {
   -installd # for relabelfrom and unlink, check for this in explicit neverallow
   -vold_prepare_subdirs # For unlink
   with_asan(`-asan_extract')
-  -vold
 } system_data_file:file no_w_file_perms;
 # do not grant anything greater than r_file_perms and relabelfrom unlink
 # to installd
