@@ -145,3 +145,5 @@ odm.                    u:object_r:vendor_default_prop:s0
 persist.odm.            u:object_r:vendor_default_prop:s0
 persist.vendor.         u:object_r:vendor_default_prop:s0
 vendor.                 u:object_r:vendor_default_prop:s0
+
+adb.network.port                 u:object_r:adbtcp_prop:s0
